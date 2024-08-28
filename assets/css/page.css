@@ -1,0 +1,57 @@
+        /* Remove margens e padding padrão */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Estilo do container de vídeo */
+        .video-container {
+            position: fixed; /* Fixa o vídeo no fundo */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+        }
+
+        /* Estilo do vídeo de fundo */
+        .background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Estilo para o conteúdo sobreposto */
+        .content {
+            position: relative; /* Permite posicionamento relativo ao container */
+            z-index: 1; /* Mantém o conteúdo na frente do vídeo */
+            color: white; /* Cor do texto sobre o vídeo */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Estilo para o botão */
+        .content button {
+            background-color: #003366; /* Cor de fundo azul escuro */
+            color: yellow; /* Cor do texto amarelo */
+            border: 2px solid #003366; /* Borda azul escura */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 10px 20px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            cursor: pointer; /* Cursor de mão ao passar o mouse */
+            transition: background-color 0.3s, color 0.3s; /* Transição suave */
+        }
+
+        /* Efeito ao passar o mouse no botão */
+        .content button:hover {
+            background-color: yellow; /* Muda o fundo para amarelo ao passar o mouse */
+            color: #003366; /* Muda a cor do texto para azul escuro */
+        }
